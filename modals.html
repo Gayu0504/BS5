@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modals</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container mt-5 border">
+        <br>
+        <h1>Models</h1>
+        <button type="button" class="btn btn-primary border" data-bs-toggle="modal" data-bs-target="#mymodal">open
+            model</button>
+        <div id="mymodal" class="modal fade">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <h4 class="modal-title">Alert! modal heading</h4>
+                        <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+
+
+                    </div>
+                    <div class="modal-body">
+                        Modal Body... Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid saepe cum molestiae quaerat sunt iste. Natus sequi quam, officia consequatur velit sunt similique neque obcaecati vitae dolor! Sapiente tempore quis, fugit non iste excepturi, consequatur eos, adipisci culpa eligendi doloribus ad maxime deserunt tenetur necessitatibus praesentium cupiditate inventore. Facilis, iusto aperiam odit impedit qui accusamus praesentium officiis rem labore et ex, eaque voluptatem incidunt distinctio quae itaque molestiae dicta nostrum repellat illum harum ipsa illo sequi. Iste, doloribus suscipit excepturi quas est deleniti! Quis corporis tenetur laborum numquam facilis. Explicabo eos tempore similique nulla, in error quasi maxime omnis tenetur quod debitis at? Quam atque debitis amet fugiat, laborum dolore nulla! Labore minus eveniet, nisi velit aperiam perspiciatis ullam possimus accusamus culpa ipsam quo qui aliquam non praesentium facere a excepturi et! Deserunt nobis laboriosam nisi eos alias eaque tenetur qui accusantium obcaecati voluptatum quia nam vitae expedita ut impedit, natus minima et odio velit autem iusto fugiat? At recusandae aut voluptate mollitia itaque incidunt doloribus laborum praesentium labore velit atque repudiandae perferendis, temporibus cumque esse voluptatibus nihil? Repellat ab optio veritatis est dolore omnis ipsam, assumenda temporibus explicabo facere fuga. Eius asperiores illum harum, deleniti provident aliquid quis eos expedita, beatae cupiditate iure molestias suscipit eveniet. Corrupti aspernatur minus laboriosam sint neque odio sunt ab eius sequi dolorem minima, explicabo perspiciatis, dolores in eum officia dolorum numquam iste voluptatum, aperiam facere! Dignissimos, quam est! Illum eos aspernatur maxime qui neque natus facilis inventore, magnam impedit vero deleniti praesentium? Veniam incidunt in assumenda quo magnam iste qui exercitationem quae laborum, enim ut dolore necessitatibus deserunt officiis similique reiciendis numquam provident natus quam, temporibus harum. Odit tempora quasi illo, aut architecto dolore voluptatibus quas, ducimus at, sequi distinctio! Magni sequi voluptatum sit mollitia aspernatur ducimus. Minima, alias dolorem quo consequatur aspernatur quasi voluptatum fuga ullam esse, laudantium facilis reiciendis odit? Doloremque dignissimos, itaque veritatis incidunt quam est, maxime qui quidem expedita fugiat id corrupti assumenda architecto porro, repellendus beatae laudantium nobis eum voluptatem! Ut exercitationem repellat nisi ullam, veritatis tenetur fugiat doloribus ratione mollitia modi in perspiciatis amet, alias ad, eveniet recusandae! Reprehenderit consectetur tempore hic consequuntur optio qui nam unde dolore enim perspiciatis vero nobis a eaque accusantium nesciunt reiciendis voluptatum possimus, iste esse fugiat illum. Alias ullam fuga laudantium, amet ratione eaque aperiam veniam aliquam libero voluptates! Quam nulla numquam obcaecati quidem repellendus! Labore quae adipisci repellendus officia veniam?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <br>
+    </div>
+    <br><br>
+<div class="container mt-5 border"><br>
+    <button type="button" class="btn btn-primary mt-2" data-bs-toggle="tooltip" title="Hooray!">Hover over me!</button>
+
+
+    <button type="button" class="btn btn-primary mt-2" data-bs-toggle="popover" title="Popover Header" data-bs-content="Some content inside the popover">Toggle popover</button>
+    <br><br>
+
+    <a href="#" title="Header" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="Popover text">Hover over me</a>
+<br><br>
+<button type="button" class="btn btn-primary" id="toastbtn">Show Toast</button>
+    <div class="toast show">
+        <div class="toast-header">
+            toast header
+            <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">
+            some text inside
+        </div>
+    </div>
+</div>
+<br><br>
+
+
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+
+
+        document.getElementById("toastbtn").onclick = function() {
+  var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+  var toastList = toastElList.map(function(toastEl) {
+    return new bootstrap.Toast(toastEl)
+  })
+  toastList.forEach(toast => toast.show())
+}
+        </script>
+</body>
+
+</html>
